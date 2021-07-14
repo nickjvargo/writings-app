@@ -1,0 +1,16 @@
+[
+    {
+        "storyId": 1,
+        "storyName": "Story One",
+        "storyLength": 1500,
+        "storyGenre": "Horror",
+        "storyDescription": "The woods have more than just trees in them."
+    },
+    {
+        "storyId": 2,
+        "storyName": "Story Two",
+        "storyLength": 2000,
+        "storyGenre": "Literary",
+        "storyDescription": "Kindness from a stranger can change any destiny."
+    }
+]
