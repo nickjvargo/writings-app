@@ -1,16 +1,18 @@
 [
     {
-        "storyId": 1,
-        "storyName": "Story One",
-        "storyLength": 1500,
-        "storyGenre": "Horror",
-        "storyDescription": "The woods have more than just trees in them."
+        "id": 1,
+        "name": "Story One",
+        "length": 1500,
+        "genre": "Horror",
+        "description": "The woods have more than just trees in them.",
+        "url": "someUrlOne"
     },
     {
-        "storyId": 2,
-        "storyName": "Story Two",
-        "storyLength": 2000,
-        "storyGenre": "Literary",
-        "storyDescription": "Kindness from a stranger can change any destiny."
+        "id": 2,
+        "name": "Story Two",
+        "length": 2000,
+        "genre": "Literary",
+        "description": "Kindness from a stranger can change any destiny.",
+        "url": "someUrlTwo"
     }
 ]

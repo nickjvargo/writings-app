@@ -27,12 +27,12 @@
                 <tbody>
                     <tr *ngFor='let story of filteredStories'>
                         <td>
-                            <a [routerLink]="['/stories', story.storyId]">
-                                {{ story.storyName }}
+                            <a [routerLink]="['/stories', story.id]">
+                                {{ story.name }}
                             </a> 
                         </td>
-                        <td>{{ story.storyLength }}</td>
-                        <td>{{ story.storyGenre }}</td>
+                        <td>{{ story.length }}</td>
+                        <td>{{ story.genre }}</td>
                     </tr>
                 </tbody>
             </table>

@@ -29,7 +29,7 @@ export class WritingListComponent implements OnInit, OnDestroy {
   performFilter(filterBy: string): IStory[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.stories.filter((story: IStory) =>
-    story.storyName.toLocaleLowerCase().includes(filterBy));
+    story.name.toLocaleLowerCase().includes(filterBy));
   }
 
   ngOnInit(): void {

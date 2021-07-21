@@ -1,7 +1,8 @@
 export interface IStory {
-    storyId: number;
-    storyName: string;
-    storyLength: number;
-    storyGenre: string;
-    storyDescription: string;
+    id: number;
+    name: string;
+    length: number;
+    genre: string;
+    description: string;
+    url: string;
 }

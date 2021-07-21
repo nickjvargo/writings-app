@@ -2,19 +2,20 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 import { IStory } from "./story"
 
 @Injectable({
   providedIn: 'root'
 })
 export class StoryService {
-  private storiesUrl = 'assets/stories.json';
+  private storiesUrl = environment.apiBaseUrl;
 
   constructor(private http: HttpClient) { }
 
 
   getStories(): Observable<IStory[]> {
-    return this.http.get<IStory[]>(this.storiesUrl)
+    return this.http.get<IStory[]>(`${this.storiesUrl}/stories`)
     .pipe(
       tap(data => console.log('All: ', JSON.stringify(data))),
       catchError(this.handleError)
@@ -24,7 +25,7 @@ export class StoryService {
   getStory(id: number): Observable<IStory | undefined> {
     return this.getStories()
     .pipe(
-      map((stories: IStory[]) => stories.find(s => s.storyId === id))
+      map((stories: IStory[]) => stories.find(s => s.id === id))
     );
   }
 
